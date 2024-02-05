@@ -31,4 +31,7 @@ public class ProductRepository {
     public Iterator<Product> findAll() {
         return productData.iterator();
     }
+    public boolean delete(Product product) {
+        return productData.remove(product);
+    }
 }
