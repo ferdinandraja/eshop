@@ -32,7 +32,10 @@ public class ProductServiceImpl implements ProductService{
         }
         return null;
     }
-
+    @Override
+    public boolean delete(Product product){
+        return product != null && productRepository.delete(product);
+    }
     @Override
     public List<Product> findAll() {
         Iterator<Product> productIterator = productRepository.findAll();
@@ -52,4 +55,5 @@ public class ProductServiceImpl implements ProductService{
         }
         return product;
     }
+
 }
