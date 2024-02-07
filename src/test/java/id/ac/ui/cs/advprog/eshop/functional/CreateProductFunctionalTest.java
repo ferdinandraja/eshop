@@ -11,9 +11,6 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import org.openqa.selenium.WebElement;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 @SpringBootTest(webEnvironment = RANDOM_PORT)
 @ExtendWith(SeleniumJupiter.class)
 public class CreateProductFunctionalTest {
@@ -29,7 +26,7 @@ public class CreateProductFunctionalTest {
 
     @BeforeEach
     void setupTest(){
-        baseUrl = String.format("%s:%d", testBaseUrl, serverPort);
+        baseUrl = String.format("%s:%d/product/create", testBaseUrl, serverPort);
         ProductListUrl = String.format("%s:%d/product/list", testBaseUrl, serverPort);
     }
     @Test
