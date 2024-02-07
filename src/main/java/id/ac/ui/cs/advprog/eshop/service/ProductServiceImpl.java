@@ -25,9 +25,9 @@ public class ProductServiceImpl implements ProductService{
 
 
     @Override
-    public Product edit(Product product) {
+    public Product edit(Product product, String identification) {
         if (product.getProductQuantity() > 0) {
-            productRepository.edit(product);
+            productRepository.edit(product, identification);
             return product;
         }
         return null;
