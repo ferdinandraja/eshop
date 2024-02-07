@@ -37,15 +37,15 @@ public class ProductController {
     }
 
     @GetMapping("/edit/{id}")
-    public String editProductGet(Model model, @PathVariable String id) {
+    public String GetEdit(Model model, @PathVariable String id) {
         Product product = service.get(id);
         model.addAttribute("product", product);
         return "Edit";
     }
 
-    @PostMapping("/edit")
-    public String editProductPost(@ModelAttribute Product product) {
-        service.edit(product);
+    @PostMapping("/edit/{id}")
+    public String PostEdit(@ModelAttribute Product product, @PathVariable String id) {
+        service.edit(product, id);
         return "redirect:list";
     }
     @GetMapping("/delete/{id}")

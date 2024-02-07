@@ -16,10 +16,10 @@ public class ProductRepository {
         productData.add(product);
         return product;
     }
-    public Product edit(Product product) {
+    public Product edit(Product product, String identification) {
         for (int i=0; i < productData.size(); i++) {
             Product currentItem = productData.get(i);
-            if (currentItem.getProductId().equals(product.getProductId())) {
+            if (currentItem.getProductId().equals(identification)) {
                 return productData.set(i, product);
             }
         }
