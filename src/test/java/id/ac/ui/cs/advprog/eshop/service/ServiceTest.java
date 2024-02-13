@@ -45,20 +45,6 @@ class ServiceTest {
         //check both products
         assertEquals(testProduct, newEditProduct);
     }
-    /*@Test
-    void testEditNotBiggerThanZero() {
-        List<Product> productlist = new ArrayList<>();
-        productlist.add(product);
-        Product productEdit a new Product:
-        productEdit.setProductNane("WuLing SPW*); productedit.setProcuctQuantity(3); producttdit.setProduct]d(product.getProductidO);
-                when(productRepository.findALL).thenReturn(productList.iteratorO));
-        when(productRepository.edit(productEdit, product.getProductId()))
-•thennswer(invocation - +productist.set(0, productEdit));
-        when(productRepository.delete(productEdit)).thenAnswer(invocation - +procuctList.renove(productEdit));
-        service.ecit(productEcit, productEdit.getProductidO);
-        List«Product»products a service.findAlLo;
-        assertfalse(products.iterator().hastlext());
-    }*/
 
     @Test
     void testCreateService() {
