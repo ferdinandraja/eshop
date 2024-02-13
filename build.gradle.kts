@@ -27,8 +27,8 @@ repositories {
 }
 sonar {
     properties {
-        property("sonar.projectKey", "ferdinandraja")
-        property("sonar.organization", "Raja")
+        property("sonar.projectKey", "ferdinandraja_eshop")
+        property("sonar.organization", "ferdinandraja")
         property("sonar.host.url", "https://sonarcloud.io")
     }
 }
