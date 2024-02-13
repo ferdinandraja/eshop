@@ -12,7 +12,6 @@ import java.util.List;
 @Controller
 @RequestMapping("/product")
 public class ProductController {
-
     @Autowired
     private ProductService service;
 
@@ -43,10 +42,10 @@ public class ProductController {
         return "Edit";
     }
 
-    @PostMapping("/edit")
+    @PostMapping("/edit/{id}")
     public String PostEdit(@ModelAttribute Product product, @PathVariable String id) {
         service.edit(product, id);
-        return "redirect:list";
+        return "redirect:/product/list";
     }
     @GetMapping("/delete/{id}")
     public String deleteProduct(@PathVariable String id) {
