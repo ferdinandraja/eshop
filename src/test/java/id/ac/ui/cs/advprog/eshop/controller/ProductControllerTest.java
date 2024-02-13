@@ -99,12 +99,13 @@ class ProductControllerTest {
         // Arrange
         String id = "1";
         Product product = new Product();
+        when(productService.edit(product, id)).thenReturn(product);
 
         // Act
         String redirectUrl = productController.PostEdit(product, id);
 
         // Assert
-        assertEquals("redirect:list", redirectUrl, "Redirect URL should match");
+        assertEquals("redirect:/product/list", redirectUrl, "Redirect URL should match");
         verify(productService).edit(product, id);
         verifyNoMoreInteractions(productService);
     }
