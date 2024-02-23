@@ -12,8 +12,10 @@ import java.util.List;
 @Controller
 @RequestMapping("/product")
 public class ProductController {
+
     @Autowired
     private ProductService service;
+
 
     @GetMapping("/create")
     public String createProductGet(Model model){
