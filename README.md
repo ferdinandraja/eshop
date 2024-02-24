@@ -26,3 +26,15 @@ Yes, my project right now has already met the definition of Continuous Integrati
 
 
 [Deployment Link]--(https://eshop-ferdinandraja.koyeb.app/)
+
+<h1>Modul 3</h1>
+<h2> Reflection 1 </h2>
+For this exercise, I have use three principles for my code. First, I implemented Liskov Substitution Principle which is a principle where the subclass has the same function as the super class. Therefore, to apply this principle, I separated the CarController with the ProductController, because the CarController should not extend the ProductController because it has a different function.
+Secondly, I applied the Dependency Inversion Principle where it depends on the abstract classes and interface instead of concrete classes. I implemented this in the repository where I created a new interface class to be referenced on the CarRepository and services.
+Lastly, my code has already implemented the Open-Closed Principle, where software entities such as classes and functions should open for extension. I did not add any modification for this principle because based on my analysis the code from tutorial has already implemented this principle.
+
+<h2> Reflection 2 </h2>
+The advantages of SOLID code is it makes the code easy to developed further. For example, because this code has already implemented Open-Closed Principle, it makes it easy to modify this code, just add some extensions.
+
+<h3> Reflection 3</h3>
+If the SOLID code principles is not applied, it makes it harder for further development. For example, in my code, if I did not apply the Open-Closed Principle, for further development I need to create most of the class from scratch.
