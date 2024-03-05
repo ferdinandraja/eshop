@@ -108,7 +108,7 @@ public class OrderServiceImplTest {
     }
 
     @Test
-    void testFindAllByIfAuthorCorrect() {
+    void testFindAllByAuthorIfAuthorCorrect() {
         Order order = orders.get(1);
         doReturn(orders).when(orderRepository).findAllByAuthor(order.getAuthor());
 
